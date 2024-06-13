@@ -1,34 +1,96 @@
+Meu projeto no Power BI:
+
+### Visual Mapa 1: Soma de Vendas e Unidades Vendidas por País
+Este visual permite visualizar a soma total de vendas e unidades vendidas por país. Você pode usar cores diferentes para representar diferentes quantidades de vendas, tornando o mapa uma ferramenta poderosa para identificar mercados com alto desempenho.
+
+**Módulo de Mapa:**
+- **Inicialização do mapa:** Cria um novo mapa vazio.
+- **Adiciona dados ao mapa:** Importa os campos "País", "Vendas" e "Unidades Vendidas" para o mapa.
+- **Ajusta configurações do mapa:** Personaliza a aparência do mapa, como a cor das bolhas e a transparência.
+- **Adiciona dicas de ferramentas:** Fornece informações adicionais sobre as vendas quando o usuário passa o mouse sobre uma bolha.
+
+### Visual Mapa 2: Lucro por Segmento
+Este visual destaca o lucro gerado por diferentes segmentos do negócio. É útil para entender quais segmentos estão mais rentáveis e como eles contribuem para o lucro geral.
+
+**Módulo de Mapa:**
+- **Inicialização do mapa:** Cria um novo mapa vazio.
+- **Adiciona dados ao mapa:** Importa os campos "Segmento" e "Lucro" para o mapa.
+- **Ajusta configurações do mapa:** Personaliza a aparência do mapa, como a cor das bolhas e a transparência.
+- **Adiciona dicas de ferramentas:** Fornece informações adicionais sobre o lucro quando o usuário passa o mouse sobre uma bolha.
+
+### Visual de Pizza: Lucro por Segmento
+O gráfico de pizza é uma maneira visualmente atraente de representar a proporção de lucro que cada segmento contribui para o total. Cada fatia da pizza corresponde a um segmento, com o tamanho da fatia indicando sua participação no lucro total.
+
+**Módulo de Gráfico de Pizza:**
+- **Inicialização do gráfico de pizza:** Cria um novo gráfico de pizza vazio.
+- **Adiciona dados ao gráfico de pizza:** Importa os campos "Segmento" e "Lucro" para o gráfico.
+- **Ajusta configurações do gráfico:** Personaliza a aparência das fatias, como as cores e a transparência.
+- **Adiciona dicas de ferramentas:** Fornece informações adicionais sobre o lucro quando o usuário passa o mouse sobre uma fatia.
+
+Para melhorar o projeto "Analisando-Dados-com-meu-Primeiro-Projeto-no-Power-BI", posso ajudar a organizar o código em módulos e adicionar modelos de código. Aqui está uma estrutura sugerida para o seu projeto:
+
+```markdown
 # Analisando-Dados-com-meu-Primeiro-Projeto-no-Power-BI
-Para criar o "Visual Mapa 1: Soma de Vendas e Unidades Vendidas por País", você pode seguir os passos abaixo:
 
-1. **Selecionar o Visual de Mapa**: No Power BI, na guia "Visualizações", selecione o ícone de "Mapa". Isso criará um novo visual de mapa em branco no seu relatório.
+## Visual Mapa 1: Soma de Vendas e Unidades Vendidas por País
+### Módulo de Mapa
+```plaintext
+// Inicialização do mapa
+var mapa = new Mapa();
 
-2. **Adicionar Dados ao Visual**: No painel "Campos", arraste o campo "País" para a área "Localização", o campo "Vendas" e "Unidades Vendidas" para a área "Valores". Isso criará um mapa mostrando a soma de vendas e unidades vendidas por país.
+// Adiciona dados ao mapa
+mapa.adicionarDados("País", "Vendas", "Unidades Vendidas");
 
-3. **Ajustar as Configurações do Mapa**: Você pode ajustar as configurações do mapa para melhor atender às suas necessidades. Por exemplo, você pode alterar a cor das bolhas no mapa, ajustar a transparência, adicionar um mapa de calor, etc.
+// Ajusta configurações do mapa
+mapa.configurarMapa({
+  corBolhas: "corEscolhida",
+  transparência: "valorEscolhido",
+  mapaCéu: "adicionarMapaCéu"
+});
 
-4. **Adicionar Dicas de Ferramentas**: As dicas de ferramentas podem fornecer informações adicionais quando você passa o mouse sobre uma parte do mapa. Você pode adicionar detalhes como o número total de vendas, a média de vendas ou outras informações relevantes.
+// Adiciona dicas de ferramentas ao mapa
+mapa.adicionarDicas("Total de Vendas", "Média de Vendas");
+```
 
-Para criar o "Visual Mapa 2: Lucro por Segmento", você pode seguir os passos abaixo:
+## Visual Mapa 2: Lucro por Segmento
+### Módulo de Mapa
+```plaintext
+// Inicialização do mapa
+var mapa = new Mapa();
 
-1. **Selecionar o Visual de Mapa**: No Power BI, na guia "Visualizações", selecione o ícone de "Mapa". Isso criará um novo visual de mapa em branco no seu relatório.
+// Adiciona dados ao mapa
+mapa.adicionarDados("Segmento", "Lucro");
 
-2. **Adicionar Dados ao Visual**: No painel "Campos", arraste o campo "Segmento" para a área "Legenda" e o campo "Lucro" para a área "Valores". Isso criará um mapa mostrando o lucro por segmento.
+// Ajusta configurações do mapa
+mapa.configurarMapa({
+  corBolhas: "corEscolhida",
+  transparência: "valorEscolhido",
+  mapaCéu: "adicionarMapaCéu"
+});
 
-3. **Ajustar as Configurações do Mapa**: Você pode ajustar as configurações do mapa para melhor atender às suas necessidades. Por exemplo, você pode alterar a cor das bolhas no mapa, ajustar a transparência, adicionar um mapa de calor, etc.
+// Adiciona dicas de ferramentas ao mapa
+mapa.adicionarDicas("Total de Lucro", "Média de Lucro");
+```
 
-4. **Adicionar Dicas de Ferramentas**: As dicas de ferramentas podem fornecer informações adicionais quando você passa o mouse sobre uma parte do mapa. Você pode adicionar detalhes como o número total de vendas, a média de vendas ou outras informações relevantes.
+## Visual de Pizza: Lucro por Segmento
+### Módulo de Gráfico de Pizza
+```plaintext
+// Inicialização do gráfico de pizza
+var pizza = new GráficoPizza();
 
-Para criar o "Visual de Pizza: Lucro por Segmento", você pode seguir os passos abaixo:
+// Adiciona dados ao gráfico de pizza
+pizza.adicionarDados("Segmento", "Lucro");
 
-1. **Selecionar o Visual de Pizza**: No Power BI, na guia "Visualizações", selecione o ícone de "Gráfico de pizza". Isso criará um novo visual de pizza em branco no seu relatório.
+// Ajusta configurações do gráfico de pizza
+pizza.configurarGráfico({
+  coresFatias: ["cor1", "cor2", ...],
+  transparência: "valorEscolhido",
+  rótulosDados: "adicionarRótulos"
+});
 
-2. **Adicionar Dados ao Visual**: No painel "Campos", arraste o campo "Segmento" para a área "Legendas" e o campo "Lucro" para a área "Valores". Isso criará um gráfico de pizza mostrando o lucro por segmento.
+// Adiciona dicas de ferramentas ao gráfico de pizza
+pizza.adicionarDicas("Total de Lucro", "Média de Lucro");
+```
+```
 
-3. **Ajustar as Configurações do Gráfico**: Você pode ajustar as configurações do gráfico para melhor atender às suas necessidades. Por exemplo, você pode alterar as cores das fatias do gráfico, ajustar a transparência, adicionar rótulos de dados, etc.
-
-4. **Adicionar Dicas de Ferramentas**: As dicas de ferramentas podem fornecer informações adicionais quando você passa o mouse sobre uma parte do gráfico de pizza. Você pode adicionar detalhes como o número total de vendas, a média de vendas ou outras informações relevantes.
-
-https://github.com/julianazanelatto/power_bi_analyst
-
-https://github.com/julianazanelatto/power_bi_analyst
+Esses modelos são apenas um exemplo e podem ser adaptados conforme as necessidades específicas de cada projeto. Só lembre de substituir os valores e métodos pelos que são relevantes para o Power BI e o seu conjunto de dados.
